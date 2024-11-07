@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+</head>
+<body>
+    <h1>Available Rooms</h1>
+    <table border="1">
+        <tr>
+            <th>Room Number</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {% for room in rooms %}
+        <tr>
+            <td>{{ room[1] }}</td>
+            <td>{{ room[2] }}</td>
+            <td>{{ room[3] }}</td>
+            <td>{{ room[4] }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
