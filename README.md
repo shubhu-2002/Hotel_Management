@@ -33,11 +33,10 @@ bash
 Copy code
 git clone https://github.com/shubhu-2002/Hotel_Management.git
 cd Hotel_Management
-Set up a virtual environment (optional but recommended):
 
-bash
-Copy code
+**Set up a virtual environment:**  
 python -m venv env
+**Activate virtual environment:**  
 .\env\Scripts\activate.ps1
 
 Initialize the database: Make sure the init_db() function in app.py is called to create the required tables in database.db.
