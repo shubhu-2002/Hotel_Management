@@ -1,7 +1,9 @@
 #Hotel Management System
+
 A Hotel Management System built with Flask and SQLite to manage room bookings, customer information, and availability of rooms.
 
 #Table of Contents:
+
 Project Overview
 Features
 Technologies Used
