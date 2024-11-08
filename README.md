@@ -35,7 +35,8 @@ git clone https://github.com/shubhu-2002/Hotel_Management.git
 cd Hotel_Management
 
 **Set up a virtual environment:**  
-python -m venv env
+python -m venv env  
+
 **Activate virtual environment:**  
 .\env\Scripts\activate.ps1
 
