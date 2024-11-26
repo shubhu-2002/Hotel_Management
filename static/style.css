@@ -1,3 +1,14 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: #333;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid black;
+}
 
