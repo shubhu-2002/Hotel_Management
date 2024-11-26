@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooms</title>
+    <style>
+        /* body{
+            background-image: url("{{ url_for('static', filename='room avaliable.jpg') }}");
+            background-size: contain;
+        } */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .booked {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Available Rooms</h1>
-    <table border="1">
+    <h1 style="text-align: center;">Available Rooms</h1>
+    <table>
         <tr>
             <th>Room Number</th>
             <th>Type</th>
@@ -21,10 +56,18 @@
             <td>{{ room[2] }}</td>
             <td>{{ room[3] }}</td>
             <td>{{ room[4] }}</td>
-            
+            <td>
+                {% if room[4] == 'AVAILABLE' %}
+                    <a href="{{ url_for('book_room') }}">Book Now</a>
+                {% else %}
+                    <span class="booked">Already Booked</span>
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </table>
-    <a href="{{ url_for('home') }}">Back to Home</a>
+    <div style="text-align: center;">
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
 </body>
 </html>
